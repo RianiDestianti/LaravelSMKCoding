@@ -1,5 +1,6 @@
 @extends('layout')
 @section('konten')
+
 <div class="d flex">
     <h4>List Siswa</h4>
     <div class="ms-auto">

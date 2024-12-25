@@ -9,6 +9,15 @@
 </head>
 <body>
     <h1 class="text-center mt-3">CRUD Siswa Dengan Laravel 11</h1>
+    @if(Auth::check())
+   <div class="text-center">
+    <b>Halo {{ Auth::user()->name }}, Anda Berhasil Login</b>
+    <form action="{{ route('logout') }}" method="post">
+        @csrf
+        <button class ="btn btn-danger btn-sm">Logout</button>
+    </form>
+   </div>
+    @endif
     <div class="mt-3 container">
         @yield('konten')
     </div>
